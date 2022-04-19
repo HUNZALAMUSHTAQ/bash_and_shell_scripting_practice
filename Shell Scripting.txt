@@ -1,0 +1,49 @@
+Exercise 2 - Using 'Shabang' line
+In this exercise, we will edit the script 'greet.sh' created in the previous exercise and make it an executable file.
+
+This is done to ensure that the name of the script can be used like a command.
+
+Adding this special line lets us specify the path to the interpreter of the script, which is 'bash' in this case.
+
+Let us follow the below steps.
+
+2.1 : Find the path to the interpreter.
+
+The which command helps you find out the path of the command 'bash'.
+
+which bash
+In this case it returns the path '/bin/bash'.
+
+2.2 : Edit the script 'greet.sh' and add the shabang line to the script.
+
+Open the file and add the following line at the beginning of the script:
+
+#! /bin/bash
+The script should now look like the following:
+
+
+
+2.3 Check the permissions of the script.
+
+One more step needs to be completed to make 'greet.sh' completely executable by name.
+Let us add the execute permission for the user on greet.sh.
+
+chmod +x greet.sh
+Verify if the execute permission is granted.
+
+Generally, it is not a good idea to grant permissions to a script for all user, groups and others alike. It is more appropriate to limit the execute permission to only the owner.
+
+To change permissions for greet.sh, run the command below:
+
+chmod u+x greet.sh
+Verify the permissions using the command below.
+
+ls -l greet.sh
+If you wish to grant execute permission to everyone you need to run the command chmod +x greet.sh
+
+2.4 Execute the script.
+
+Run the command given below to execute the shell script.
+
+./greet.sh
+The '.' here refers to the current directory. We are telling linux to execute the script greet.sh that is in the current directory.
